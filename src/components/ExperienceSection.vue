@@ -5,9 +5,7 @@
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
           Work <span class="gradient-text">Experience</span>
         </h2>
-        <p class="text-lg text-dark-600 dark:text-dark-400 max-w-2xl mx-auto">
-          My professional journey in DevOps engineering, showcasing key achievements and contributions.
-        </p>
+
       </div>
 
       <div class="relative">
@@ -90,64 +88,60 @@ export default {
       experiences: [
         {
           id: 1,
-          title: 'Senior DevOps Engineer',
-          company: 'TechCorp Solutions',
-          duration: '2023 - Present',
-          description: 'Leading infrastructure automation initiatives and cloud migration projects for enterprise clients. Responsible for designing scalable architectures and implementing best practices.',
+          title: 'DevOps Engineer',
+          company: 'Nathan and Nathan',
+          duration: '2024 - Present',
+          description: ' I oversee the design of scalable, secure architectures by implementing DevOps best practices across different environments.',
           achievements: [
-            'Reduced deployment time by 70% through implementation of automated CI/CD pipelines',
-            'Migrated 50+ applications to Kubernetes with zero downtime',
-            'Implemented infrastructure as code using Terraform, reducing manual configuration by 90%',
-            'Led a team of 5 engineers in cloud migration projects',
-            'Achieved 99.9% uptime for critical production systems'
+            'Build and manage automated CI/CD with Bitbucket Pipelines, reducing deployment time across different environments',
+            'Migrated over 150+ applications from docker swarm to AWS ECS managed cluster with zero downtime',
+            'Automated routine DevOps tasks (e.g., AWS provisioning, database access, repository acess) using Python and Terraform',
+            'Implemented centralized monitoring and logging stack using Prometheus, Node Exporter, Loki, Promtail, and Grafana',
+            'Developed MongoDB backup, monitoring, and auto-scaling strategies for high availability and performance',
+            'Integrated SonarQube, Trivy, and Gitleaks into CI/CD to enforce code quality and detect vulnerabilities early',
           ],
-          technologies: ['AWS', 'Kubernetes', 'Terraform', 'Jenkins', 'Docker', 'Prometheus', 'Grafana', 'Python', 'Bash']
+          technologies: ['AWS', 'ECS', 'Terraform', 'Bitbucket Pipelines', 'Docker', 'Prometheus', 'Grafana', 'Python', 'Bash', 'MongoDB', 'Nginx']
         },
         {
           id: 2,
           title: 'DevOps Engineer',
-          company: 'CloudScale Inc.',
-          duration: '2021 - 2023',
-          description: 'Implemented and maintained CI/CD pipelines, managed containerized applications, and ensured high availability of production systems.',
+          company: 'Xetova LTD.',
+          duration: '2022 - 2023',
+          description: 'Collaborated closely with development teams to enforce operational best practices and optimized quality code.',
           achievements: [
-            'Built and maintained 20+ microservices using Docker and Kubernetes',
-            'Automated infrastructure provisioning using Terraform and Ansible',
-            'Implemented monitoring and alerting with Prometheus and Grafana',
-            'Reduced infrastructure costs by 40% through optimization',
-            'Created disaster recovery procedures and backup strategies'
+            'Dockerized PHP and React applications and deployed them to AWS EC2, improving consistency and deployment efficiency',
+            'Provisioned and managed AWS infrastructure using CloudFormation, accelerating environment setup and increasing reliability',
+            'Managed client domain configurations through Cloudflare, ensuring accurate DNS setup and reducing domain-related issues',
+            'Implemented AWS CloudWatch for cloud resource monitoring, leading to cost savings through proactive optimization',
+            'Contributed to infrastructure-as-code practices to streamline repeatable deployments and reduce human error'
           ],
-          technologies: ['Docker', 'Kubernetes', 'Terraform', 'Ansible', 'Jenkins', 'Prometheus', 'Grafana', 'AWS', 'Bash']
+          technologies: ['Docker', 'Cloudflare', 'React', 'Prometheus', 'Grafana', 'AWS', 'Bash', 'PHP', 'Wazuh', 'Apache']
         },
         {
           id: 3,
-          title: 'System Administrator',
-          company: 'DataFlow Systems',
-          duration: '2020 - 2021',
-          description: 'Managed server infrastructure, performed system maintenance, and implemented basic automation scripts.',
+          title: 'Cloud Engineer',
+          company: 'Azubi Africa Bootcamp',
+          duration: '2022 - 2022',
+          description: 'Completed an intensive cloud engineering apprenticeship focused on designing secure, scalable AWS architectures. Gained hands-on experience with core AWS services, automation, and cloud security best practices while delivering production-ready infrastructure solutions..',
           achievements: [
-            'Managed 100+ Linux servers across multiple data centers',
-            'Implemented automated backup and monitoring solutions',
-            'Reduced manual tasks by 60% through scripting',
-            'Improved system security through regular updates and patches',
-            'Created documentation for system procedures and configurations'
+            'Designed and optimized AWS VPC architectures with subnets, route tables, NACLs, and gateways to ensure secure, efficient networking',
+            'Deployed EC2 and RDS instances across multiple Availability Zones for high availability and fault tolerance',
+            'Configured scalable traffic management using Load Balancers, CloudFront, and Route 53 to improve performance and reliability',
+            'Strengthened AWS security posture with IAM policies, security groups, and encryption strategies for data protection',
+            'Applied cost optimization techniques including auto-scaling, spot instances, and S3 lifecycle rules to manage resources efficiently'
           ],
-          technologies: ['Linux', 'Bash', 'Python', 'Nagios', 'Ansible', 'MySQL', 'Nginx', 'Apache']
+          technologies: ['Linux', 'Git', 'Python', 'VPC', 'S3', 'RDS', 'Nginx', 'CloudFormation', 'Load Balancer', 'IAM']
         }
       ],
       certifications: [
         {
           name: 'AWS Certified Solutions Architect',
           issuer: 'Amazon Web Services',
-          date: '2023'
-        },
-        {
-          name: 'Certified Kubernetes Administrator',
-          issuer: 'Cloud Native Computing Foundation',
           date: '2022'
         },
         {
-          name: 'Terraform Associate',
-          issuer: 'HashiCorp',
+          name: 'AWS Certified Cloud Practicioner',
+          issuer: 'Amazon Web Services',
           date: '2022'
         }
       ]

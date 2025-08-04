@@ -5,9 +5,6 @@
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
           Technical <span class="gradient-text">Skills</span>
         </h2>
-        <p class="text-lg text-dark-600 dark:text-dark-400 max-w-2xl mx-auto">
-          A comprehensive toolkit of technologies and methodologies I use to build robust, scalable infrastructure.
-        </p>
       </div>
 
       <div class="grid gap-8">
@@ -111,52 +108,38 @@ export default {
     return {
       cloudSkills: [
         { name: 'AWS', icon: '☁️' },
-        { name: 'Azure', icon: '☁️' },
         { name: 'GCP', icon: '☁️' },
-        { name: 'Digital Ocean', icon: '☁️' }
       ],
       containerSkills: [
         { name: 'Docker', icon: '📦' },
         { name: 'Kubernetes', icon: '📦' },
-        { name: 'Helm', icon: '📦' },
+        { name: 'ECS', icon: '📦' },
         { name: 'Docker Compose', icon: '📦' }
       ],
       cicdSkills: [
         { name: 'Jenkins', icon: '🌿' },
-        { name: 'GitLab CI', icon: '🌿' },
         { name: 'GitHub Actions', icon: '🌿' },
-        { name: 'ArgoCD', icon: '🌿' }
+        { name: 'Bitbucket Pipeline', icon: '🌿' }
       ],
       iacSkills: [
         { name: 'Terraform', icon: '💻' },
         { name: 'CloudFormation', icon: '💻' },
         { name: 'Ansible', icon: '💻' },
-        { name: 'Pulumi', icon: '💻' }
       ],
       monitoringSkills: [
         { name: 'Prometheus', icon: '📊' },
         { name: 'Grafana', icon: '📊' },
-        { name: 'ELK Stack', icon: '📊' },
-        { name: 'Jaeger', icon: '📊' }
+        { name: 'Node Exporter', icon: '📊' },
+        { name: 'Loki', icon: '📊' },
+        { name: 'Promtail', icon: '📊' },
+        { name: 'Blackbox Exporter', icon: '📊' }
+
       ],
       programmingSkills: [
         { name: 'Python', icon: '🖥️' },
         { name: 'Bash', icon: '🖥️' },
-        { name: 'Go', icon: '🖥️' },
-        { name: 'JavaScript', icon: '🖥️' }
+        { name: 'YAML', icon: '🖥️' }
       ],
-      proficiencySkills: [
-        { name: 'AWS Services', level: 95 },
-        { name: 'Kubernetes', level: 90 },
-        { name: 'Docker', level: 92 },
-        { name: 'Terraform', level: 88 },
-        { name: 'Jenkins', level: 85 },
-        { name: 'Python', level: 80 },
-        { name: 'Bash Scripting', level: 85 },
-        { name: 'Prometheus/Grafana', level: 82 },
-        { name: 'Git', level: 90 },
-        { name: 'Linux Administration', level: 88 }
-      ]
     }
   }
 }

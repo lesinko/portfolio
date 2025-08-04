@@ -6,7 +6,7 @@
           About <span class="gradient-text">Me</span>
         </h2>
         <p class="text-lg text-dark-600 dark:text-dark-400 max-w-2xl mx-auto">
-          A passionate DevOps engineer dedicated to bridging the gap between development and operations through automation and best practices.
+          Experienced Cloud and DevOps Engineer specializing on automation, scalability, and system reliability. I bridge development and operations by building secure CI/CD pipelines, managing cloud infrastructure, and streamlining deployments to deliver faster, more resilient software.
         </p>
       </div>
 
@@ -24,7 +24,7 @@
                 </div>
                 <div>
                   <h4 class="font-medium">Infrastructure as Code</h4>
-                  <p class="text-sm text-dark-600 dark:text-dark-400">Design and implement infrastructure using Terraform, CloudFormation, and other IaC tools</p>
+                  <p class="text-sm text-dark-600 dark:text-dark-400">Design and implement infrastructure using Terraform</p>
                 </div>
               </div>
               <div class="flex items-start space-x-3">
@@ -33,7 +33,7 @@
                 </div>
                 <div>
                   <h4 class="font-medium">CI/CD Pipeline Development</h4>
-                  <p class="text-sm text-dark-600 dark:text-dark-400">Build robust deployment pipelines using Jenkins, GitLab CI, and GitHub Actions</p>
+                  <p class="text-sm text-dark-600 dark:text-dark-400">Build and manage robust deployment pipelines using Jenkin,Bitbucket Pipelines and GitHub Actions</p>
                 </div>
               </div>
               <div class="flex items-start space-x-3">
@@ -42,7 +42,7 @@
                 </div>
                 <div>
                   <h4 class="font-medium">Container Orchestration</h4>
-                  <p class="text-sm text-dark-600 dark:text-dark-400">Manage containerized applications with Kubernetes and Docker</p>
+                  <p class="text-sm text-dark-600 dark:text-dark-400">Manage containerized applications with AWS ECS, K8S and Docker</p>
                 </div>
               </div>
               <div class="flex items-start space-x-3">
@@ -51,7 +51,7 @@
                 </div>
                 <div>
                   <h4 class="font-medium">Monitoring & Observability</h4>
-                  <p class="text-sm text-dark-600 dark:text-dark-400">Implement comprehensive monitoring solutions with Prometheus, Grafana, and ELK stack</p>
+                  <p class="text-sm text-dark-600 dark:text-dark-400">Implement monitoring solutions with Prometheus, Grafana, Loki and Promtail</p>
                 </div>
               </div>
             </div>

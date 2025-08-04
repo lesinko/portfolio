@@ -11,10 +11,6 @@
             <h2 class="text-2xl md:text-3xl text-dark-600 dark:text-dark-400 font-medium">
               DevOps Engineer
             </h2>
-            <p class="text-lg text-dark-600 dark:text-dark-400 leading-relaxed max-w-lg">
-              Passionate about building scalable infrastructure, automating deployments, and optimizing development workflows. 
-              With 3 years of experience in cloud technologies and CI/CD pipelines.
-            </p>
           </div>
 
         </div>
