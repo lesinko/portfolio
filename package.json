@@ -1,7 +1,7 @@
 {
   "name": "titus-lesinko-portfolio",
   "version": "1.0.0",
-  "description": "Titus Lesinko - DevOps Engineer Portfolio",
+  "description": "Titus Lesinko",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
