@@ -8,8 +8,7 @@
           <div>
             <h3 class="text-2xl font-semibold mb-6">Let's Connect</h3>
             <p class="text-dark-600 dark:text-dark-400 leading-relaxed mb-8">
-              I'm always interested in new opportunities and exciting projects. Whether you need help with 
-              infrastructure automation, CI/CD pipelines, or cloud migration, I'd love to hear from you.
+             Looking to contribute to high-impact teams through automation, cloud architecture, and streamlined delivery pipelines.
             </p>
           </div>
 
