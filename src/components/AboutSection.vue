@@ -2,7 +2,7 @@
   <section id="about" class="section-padding">
     <div class="container-custom">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        <h2 class="text-xl md:text-3xl font-bold mb-4">
           About <span class="gradient-text">Me</span>
         </h2>
         <p class="text-lg text-dark-600 dark:text-dark-400 max-w-2xl mx-auto">

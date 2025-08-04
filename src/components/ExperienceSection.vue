@@ -2,7 +2,7 @@
   <section id="experience" class="section-padding">
     <div class="container-custom">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        <h2 class="text-xl md:text-3xl font-bold mb-4">
           Work <span class="gradient-text">Experience</span>
         </h2>
 

@@ -5,11 +5,11 @@
         <!-- Content -->
         <div class="space-y-8">
           <div class="space-y-4">
-            <h1 class="text-2xl md:text-4xl font-bold leading-tight">
+            <h1 class="text-xl md:text-3xl font-bold leading-tight">
               Hi, I'm <span class="gradient-text">Titus Lesinko</span>
             </h1>
-            <h2 class="text-2xl md:text-3xl text-dark-600 dark:text-dark-400 font-medium">
-              DevOps Engineer
+            <h2 class="text-xl md:text-3xl text-dark-600 dark:text-dark-400 font-medium">
+              Cloud and DevOps Engineer
             </h2>
           </div>
 
@@ -19,7 +19,7 @@
         <div class="relative">
           <div class="relative z-10">
             <!-- Animated Code Block -->
-            <div class="card max-w-md mx-auto">
+            <div class="card max-w-lg mx-auto">
               <div class="flex items-center space-x-2 mb-4">
                 <div class="w-3 h-3 bg-red-500 rounded-full"></div>
                 <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
@@ -39,7 +39,7 @@
                   <span class="text-green-600">experience</span>: <span class="text-blue-600">3</span>,
                 </div>
                 <div class="ml-4 text-dark-600 dark:text-dark-400">
-                  <span class="text-green-600">skills</span>: [<span class="text-orange-600">'AWS'</span>, <span class="text-orange-600">'Kubernetes'</span>, <span class="text-orange-600">'Docker'</span>]
+                  <span class="text-green-600">skills</span>: [<span class="text-orange-600">'AWS'</span>, <span class="text-orange-600">'CI/CD'</span>,<span class="text-orange-600">'Terraform'</span>, <span class="text-orange-600">'Docker'</span>]
                 </div>
                 <div class="text-dark-600 dark:text-dark-400">};</div>
               </div>

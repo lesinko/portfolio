@@ -2,14 +2,14 @@
   <section id="skills" class="section-padding bg-dark-50 dark:bg-dark-800/50">
     <div class="container-custom">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        <h2 class="text-xl md:text-3xl font-bold mb-4">
           Technical <span class="gradient-text">Skills</span>
         </h2>
       </div>
 
       <div class="grid gap-8">
         <!-- Cloud Platforms -->
-        <div class="card">
+        <div>
           <h3 class="text-xl font-semibold mb-6 flex items-center">
             <span class="mr-3 text-primary-600">☁️</span>
             Cloud Platforms
@@ -23,7 +23,7 @@
         </div>
 
         <!-- Container & Orchestration -->
-        <div class="card">
+        <div>
           <h3 class="text-xl font-semibold mb-6 flex items-center">
             <span class="mr-3 text-primary-600">📦</span>
             Container & Orchestration
@@ -37,7 +37,7 @@
         </div>
 
         <!-- CI/CD & Automation -->
-        <div class="card">
+        <div>
           <h3 class="text-xl font-semibold mb-6 flex items-center">
             <span class="mr-3 text-primary-600">🌿</span>
             CI/CD & Automation
@@ -51,7 +51,7 @@
         </div>
 
         <!-- Infrastructure as Code -->
-        <div class="card">
+        <div>
           <h3 class="text-xl font-semibold mb-6 flex items-center">
             <span class="mr-3 text-primary-600">💻</span>
             Infrastructure as Code
@@ -65,7 +65,7 @@
         </div>
 
         <!-- Monitoring & Observability -->
-        <div class="card">
+        <div>
           <h3 class="text-xl font-semibold mb-6 flex items-center">
             <span class="mr-3 text-primary-600">📊</span>
             Monitoring & Observability
@@ -79,7 +79,7 @@
         </div>
 
         <!-- Programming & Scripting -->
-        <div class="card">
+        <div>
           <h3 class="text-xl font-semibold mb-6 flex items-center">
             <span class="mr-3 text-primary-600">🖥️</span>
             Programming & Scripting

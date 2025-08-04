@@ -17,15 +17,6 @@
 
         <!-- Actions -->
         <div class="flex items-center space-x-4">
-          <!-- Dark Mode Toggle -->
-          <button 
-            @click="toggleDarkMode" 
-            class="p-2 rounded-lg bg-dark-100 dark:bg-dark-800 hover:bg-dark-200 dark:hover:bg-dark-700 transition-colors"
-          >
-            <span v-if="isDark" class="text-sm">☀️</span>
-            <span v-else class="text-sm">🌙</span>
-          </button>
-
           <!-- Mobile Menu Button -->
           <button 
             @click="toggleMobileMenu" 
