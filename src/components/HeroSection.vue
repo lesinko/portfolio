@@ -8,7 +8,7 @@
             <h1 class="text-xl md:text-3xl font-bold leading-tight">
               Hi, I'm <span class="gradient-text">Titus Lesinko</span>
             </h1>
-            <h2 class="text-xl md:text-3xl text-dark-600 dark:text-dark-400 font-medium">
+            <h2 class="text-xl text-dark-600 dark:text-dark-400 font-medium">
               Cloud and DevOps Engineer
             </h2>
           </div>
