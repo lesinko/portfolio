@@ -86,9 +86,22 @@ export default {
   data() {
     return {
       experiences: [
-        {
+                {
           id: 1,
-          title: 'DevOps Engineer',
+          title: 'Cloud Engineer Consultant',
+          company: 'Shinrai Technologies',
+          duration: '2025 - Present',
+          achievements: [
+            'Designed and implemented a FastAPI-based OCR document processing service capable of extracting text and QR codes from PDFs and images',
+            'Deployed and managed the service on AWS ECS Fargate with automated infrastructure provisioning using Terraform, ensuring scalability and high availability',
+            'Developed an event-driven architecture using DynamoDB Streams and AWS Lambda to automatically trigger document processing upon new data insertion',
+            'Integrated AWS S3 for secure storage and DynamoDB for status tracking, optimizing the workflow for fully automated document ingestion and processing',
+          ],
+          technologies: ['AWS', 'ECS', 'Terraform', 'GitHub Actions', 'Docker', 'Python', 'Bash', 'DynamoDB', 'S3', 'AWS Amplify']
+        },
+        {
+          id: 2,
+          title: 'Senior DevOps Engineer',
           company: 'Nathan and Nathan',
           duration: '2024 - Present',
           description: ' I oversee the design of scalable, secure architectures by implementing DevOps best practices across different environments.',
@@ -103,7 +116,7 @@ export default {
           technologies: ['AWS', 'ECS', 'Terraform', 'Bitbucket Pipelines', 'Docker', 'Prometheus', 'Grafana', 'Python', 'Bash', 'MongoDB', 'Nginx']
         },
         {
-          id: 2,
+          id: 3,
           title: 'DevOps Engineer',
           company: 'Xetova LTD.',
           duration: '2022 - 2023',
@@ -118,7 +131,7 @@ export default {
           technologies: ['Docker', 'Cloudflare', 'React', 'Prometheus', 'Grafana', 'AWS', 'Bash', 'PHP', 'Wazuh', 'Apache']
         },
         {
-          id: 3,
+          id: 4,
           title: 'Cloud Engineer',
           company: 'Azubi Africa Bootcamp',
           duration: '2022 - 2022',
