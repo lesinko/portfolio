@@ -103,7 +103,7 @@ export default {
           id: 2,
           title: 'Senior DevOps Engineer',
           company: 'Nathan and Nathan',
-          duration: '2024 - Present',
+          duration: '2023 - Present',
           description: ' I oversee the design of scalable, secure architectures by implementing DevOps best practices across different environments.',
           achievements: [
             'Build and manage automated CI/CD with Bitbucket Pipelines, reducing deployment time across different environments',

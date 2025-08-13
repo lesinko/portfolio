@@ -36,7 +36,7 @@
                   <span class="text-green-600">role</span>: <span class="text-orange-600">'DevOps Engineer'</span>,
                 </div>
                 <div class="ml-4 text-dark-600 dark:text-dark-400">
-                  <span class="text-green-600">experience</span>: <span class="text-blue-600">3</span>,
+                  <span class="text-green-600">experience</span>: <span class="text-blue-600">5+</span>,
                 </div>
                 <div class="ml-4 text-dark-600 dark:text-dark-400">
                   <span class="text-green-600">skills</span>: [<span class="text-orange-600">'AWS'</span>, <span class="text-orange-600">'CI/CD'</span>,<span class="text-orange-600">'Terraform'</span>, <span class="text-orange-600">'Docker'</span>]
