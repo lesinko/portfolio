@@ -6,7 +6,7 @@
           About <span class="gradient-text">Me</span>
         </h2>
         <p class="text-lg text-dark-600 dark:text-dark-400 max-w-2xl mx-auto">
-          Experienced Cloud and DevOps Engineer with over 5 years of experience specializing on automation, scalability, and system reliability. I bridge development and operations by building secure CI/CD pipelines, managing cloud infrastructure, and streamlining deployments to deliver faster, more resilient software.
+          Experienced Cloud and DevOps Engineer with over 4 years of experience specializing on automation, scalability, and system reliability. I bridge development and operations by building secure CI/CD pipelines, managing cloud infrastructure, and streamlining deployments to deliver faster, more resilient software.
         </p>
       </div>
 
@@ -64,11 +64,11 @@
           <!-- Quick Stats -->
           <div class="grid grid-cols-2 gap-4">
             <div class="card text-center">
-              <div class="text-2xl font-bold gradient-text">5+</div>
+              <div class="text-2xl font-bold gradient-text">4+</div>
               <div class="text-sm text-dark-600 dark:text-dark-400">Years Experience</div>
             </div>
             <div class="card text-center">
-              <div class="text-2xl font-bold gradient-text">15+</div>
+              <div class="text-2xl font-bold gradient-text">12+</div>
               <div class="text-sm text-dark-600 dark:text-dark-400">Technologies</div>
             </div>
             <div class="card text-center">
