@@ -101,7 +101,7 @@ export default {
         },
         {
           id: 2,
-          title: 'Senior DevOps Engineer',
+          title: 'DevOps Engineer',
           company: 'Nathan and Nathan',
           duration: '2023 - Present',
           description: ' I oversee the design of scalable, secure architectures by implementing DevOps best practices across different environments.',
