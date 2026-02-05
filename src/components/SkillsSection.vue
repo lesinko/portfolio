@@ -7,139 +7,96 @@
         </h2>
       </div>
 
-      <div class="grid gap-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Cloud Platforms -->
         <div>
-          <h3 class="text-xl font-semibold mb-6 flex items-center">
-            <span class="mr-3 text-primary-600">☁️</span>
+          <h3 class="text-lg font-semibold mb-4 text-primary-500">
             Cloud Platforms
           </h3>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div v-for="skill in cloudSkills" :key="skill.name" class="flex items-center space-x-3 p-3 rounded-lg bg-dark-50 dark:bg-dark-700 hover:bg-dark-100 dark:hover:bg-dark-600 transition-colors">
-              <span class="text-primary-600">{{ skill.icon }}</span>
-              <span class="font-medium text-sm">{{ skill.name }}</span>
-            </div>
-          </div>
+          <ul class="space-y-2">
+            <li v-for="skill in cloudSkills" :key="skill" class="text-gray-300">
+              {{ skill }}
+            </li>
+          </ul>
         </div>
 
         <!-- Container & Orchestration -->
         <div>
-          <h3 class="text-xl font-semibold mb-6 flex items-center">
-            <span class="mr-3 text-primary-600">📦</span>
+          <h3 class="text-lg font-semibold mb-4 text-primary-500">
             Container & Orchestration
           </h3>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div v-for="skill in containerSkills" :key="skill.name" class="flex items-center space-x-3 p-3 rounded-lg bg-dark-50 dark:bg-dark-700 hover:bg-dark-100 dark:hover:bg-dark-600 transition-colors">
-              <span class="text-primary-600">{{ skill.icon }}</span>
-              <span class="font-medium text-sm">{{ skill.name }}</span>
-            </div>
-          </div>
+          <ul class="space-y-2">
+            <li v-for="skill in containerSkills" :key="skill" class="text-gray-300">
+              {{ skill }}
+            </li>
+          </ul>
         </div>
 
         <!-- CI/CD & Automation -->
         <div>
-          <h3 class="text-xl font-semibold mb-6 flex items-center">
-            <span class="mr-3 text-primary-600">🌿</span>
+          <h3 class="text-lg font-semibold mb-4 text-primary-500">
             CI/CD & Automation
           </h3>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div v-for="skill in cicdSkills" :key="skill.name" class="flex items-center space-x-3 p-3 rounded-lg bg-dark-50 dark:bg-dark-700 hover:bg-dark-100 dark:hover:bg-dark-600 transition-colors">
-              <span class="text-primary-600">{{ skill.icon }}</span>
-              <span class="font-medium text-sm">{{ skill.name }}</span>
-            </div>
-          </div>
+          <ul class="space-y-2">
+            <li v-for="skill in cicdSkills" :key="skill" class="text-gray-300">
+              {{ skill }}
+            </li>
+          </ul>
         </div>
 
         <!-- Infrastructure as Code -->
         <div>
-          <h3 class="text-xl font-semibold mb-6 flex items-center">
-            <span class="mr-3 text-primary-600">💻</span>
+          <h3 class="text-lg font-semibold mb-4 text-primary-500">
             Infrastructure as Code
           </h3>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div v-for="skill in iacSkills" :key="skill.name" class="flex items-center space-x-3 p-3 rounded-lg bg-dark-50 dark:bg-dark-700 hover:bg-dark-100 dark:hover:bg-dark-600 transition-colors">
-              <span class="text-primary-600">{{ skill.icon }}</span>
-              <span class="font-medium text-sm">{{ skill.name }}</span>
-            </div>
-          </div>
+          <ul class="space-y-2">
+            <li v-for="skill in iacSkills" :key="skill" class="text-gray-300">
+              {{ skill }}
+            </li>
+          </ul>
         </div>
 
         <!-- Monitoring & Observability -->
         <div>
-          <h3 class="text-xl font-semibold mb-6 flex items-center">
-            <span class="mr-3 text-primary-600">📊</span>
+          <h3 class="text-lg font-semibold mb-4 text-primary-500">
             Monitoring & Observability
           </h3>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div v-for="skill in monitoringSkills" :key="skill.name" class="flex items-center space-x-3 p-3 rounded-lg bg-dark-50 dark:bg-dark-700 hover:bg-dark-100 dark:hover:bg-dark-600 transition-colors">
-              <span class="text-primary-600">{{ skill.icon }}</span>
-              <span class="font-medium text-sm">{{ skill.name }}</span>
-            </div>
-          </div>
+          <ul class="space-y-2">
+            <li v-for="skill in monitoringSkills" :key="skill" class="text-gray-300">
+              {{ skill }}
+            </li>
+          </ul>
         </div>
 
         <!-- Programming & Scripting -->
         <div>
-          <h3 class="text-xl font-semibold mb-6 flex items-center">
-            <span class="mr-3 text-primary-600">🖥️</span>
+          <h3 class="text-lg font-semibold mb-4 text-primary-500">
             Programming & Scripting
           </h3>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div v-for="skill in programmingSkills" :key="skill.name" class="flex items-center space-x-3 p-3 rounded-lg bg-dark-50 dark:bg-dark-700 hover:bg-dark-100 dark:hover:bg-dark-600 transition-colors">
-              <span class="text-primary-600">{{ skill.icon }}</span>
-              <span class="font-medium text-sm">{{ skill.name }}</span>
-            </div>
-          </div>
+          <ul class="space-y-2">
+            <li v-for="skill in programmingSkills" :key="skill" class="text-gray-300">
+              {{ skill }}
+            </li>
+          </ul>
         </div>
       </div>
-
 
     </div>
   </section>
 </template>
 
 <script>
-// Icons will be replaced with simple SVG or text
-
 export default {
   name: 'SkillsSection',
   components: {},
   data() {
     return {
-      cloudSkills: [
-        { name: 'AWS', icon: '☁️' },
-        { name: 'GCP', icon: '☁️' },
-      ],
-      containerSkills: [
-        { name: 'Docker', icon: '📦' },
-        { name: 'Kubernetes', icon: '📦' },
-        { name: 'ECS', icon: '📦' },
-        { name: 'Docker Compose', icon: '📦' }
-      ],
-      cicdSkills: [
-        { name: 'Jenkins', icon: '🌿' },
-        { name: 'GitHub Actions', icon: '🌿' },
-        { name: 'Bitbucket Pipeline', icon: '🌿' }
-      ],
-      iacSkills: [
-        { name: 'Terraform', icon: '💻' },
-        { name: 'CloudFormation', icon: '💻' },
-        { name: 'Ansible', icon: '💻' },
-      ],
-      monitoringSkills: [
-        { name: 'Prometheus', icon: '📊' },
-        { name: 'Grafana', icon: '📊' },
-        { name: 'Node Exporter', icon: '📊' },
-        { name: 'Loki', icon: '📊' },
-        { name: 'Promtail', icon: '📊' },
-        { name: 'Blackbox Exporter', icon: '📊' }
-
-      ],
-      programmingSkills: [
-        { name: 'Python', icon: '🖥️' },
-        { name: 'Bash', icon: '🖥️' },
-        { name: 'YAML', icon: '🖥️' }
-      ],
+      cloudSkills: ['AWS', 'GCP'],
+      containerSkills: ['Docker', 'Kubernetes', 'ECS', 'Docker Compose'],
+      cicdSkills: ['Jenkins', 'GitHub Actions', 'Bitbucket Pipeline'],
+      iacSkills: ['Terraform', 'CloudFormation', 'Ansible'],
+      monitoringSkills: ['Prometheus', 'Grafana', 'Node Exporter', 'Loki', 'Promtail', 'Blackbox Exporter'],
+      programmingSkills: ['Python', 'Bash', 'YAML'],
     }
   }
 }
