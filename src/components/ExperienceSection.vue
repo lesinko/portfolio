@@ -90,7 +90,7 @@ export default {
           id: 1,
           title: 'Cloud Engineer Consultant',
           company: 'Shinrai Technologies',
-          duration: '2025 - Present',
+          duration: '05/2025 - 10/2025',
           achievements: [
             'Designed and implemented a FastAPI-based OCR document processing service capable of extracting text and QR codes from PDFs and images',
             'Deployed and managed the service on AWS ECS Fargate with automated infrastructure provisioning using Terraform, ensuring scalability and high availability',
@@ -103,7 +103,7 @@ export default {
           id: 2,
           title: 'DevOps Engineer',
           company: 'Nathan and Nathan',
-          duration: '2023 - Present',
+          duration: '02/2024 - Present',
           description: ' I oversee the design of scalable, secure architectures by implementing DevOps best practices across different environments.',
           achievements: [
             'Build and manage automated CI/CD with Bitbucket Pipelines, reducing deployment time across different environments',
@@ -119,7 +119,7 @@ export default {
           id: 3,
           title: 'DevOps Engineer',
           company: 'Xetova LTD.',
-          duration: '2022 - 2023',
+          duration: '04/2022 - 12/2023',
           description: 'Collaborated closely with development teams to enforce operational best practices and optimized quality code.',
           achievements: [
             'Dockerized PHP and React applications and deployed them to AWS EC2, improving consistency and deployment efficiency',
@@ -134,7 +134,7 @@ export default {
           id: 4,
           title: 'Cloud Engineer',
           company: 'Azubi Africa Bootcamp',
-          duration: '2022 - 2022',
+          duration: '01/2022 - 07/2022',
           description: 'Completed an intensive cloud engineering apprenticeship focused on designing secure, scalable AWS architectures. Gained hands-on experience with core AWS services, automation, and cloud security best practices while delivering production-ready infrastructure solutions..',
           achievements: [
             'Designed and optimized AWS VPC architectures with subnets, route tables, NACLs, and gateways to ensure secure, efficient networking',
