@@ -14,19 +14,19 @@
             Cloud Platforms
           </h3>
           <ul class="space-y-0.5">
-            <li v-for="skill in cloudSkills" :key="skill" class="text-gray-300 text-sm leading-tight">
+            <li v-for="skill in $data['Cloud PlatformsSkills']" :key="skill" class="text-gray-300 text-sm leading-tight">
               {{ skill }}
             </li>
           </ul>
         </div>
 
-        <!-- Container & Orchestration -->
+        <!-- Containerization & Orchestration -->
         <div>
           <h3 class="text-sm font-semibold mb-2 text-primary-400 border-b border-primary-500/30 pb-1">
-            Containers
+            Containerization & Orchestration
           </h3>
           <ul class="space-y-0.5">
-            <li v-for="skill in containerSkills" :key="skill" class="text-gray-300 text-sm leading-tight">
+            <li v-for="skill in $data['Containerization & OrchestrationSkills']" :key="skill" class="text-gray-300 text-sm leading-tight">
               {{ skill }}
             </li>
           </ul>
@@ -35,10 +35,10 @@
         <!-- CI/CD & Automation -->
         <div>
           <h3 class="text-sm font-semibold mb-2 text-primary-400 border-b border-primary-500/30 pb-1">
-            CI/CD
+            CI/CD & Automation
           </h3>
           <ul class="space-y-0.5">
-            <li v-for="skill in cicdSkills" :key="skill" class="text-gray-300 text-sm leading-tight">
+            <li v-for="skill in $data['CI-CDSkills']" :key="skill" class="text-gray-300 text-sm leading-tight">
               {{ skill }}
             </li>
           </ul>
@@ -47,10 +47,10 @@
         <!-- Infrastructure as Code -->
         <div>
           <h3 class="text-sm font-semibold mb-2 text-primary-400 border-b border-primary-500/30 pb-1">
-            IaC
+            Infrastructure as Code
           </h3>
           <ul class="space-y-0.5">
-            <li v-for="skill in iacSkills" :key="skill" class="text-gray-300 text-sm leading-tight">
+            <li v-for="skill in IaCSkills" :key="skill" class="text-gray-300 text-sm leading-tight">
               {{ skill }}
             </li>
           </ul>
@@ -59,22 +59,22 @@
         <!-- Monitoring & Observability -->
         <div>
           <h3 class="text-sm font-semibold mb-2 text-primary-400 border-b border-primary-500/30 pb-1">
-            Monitoring
+            Monitoring & Observability
           </h3>
           <ul class="space-y-0.5">
-            <li v-for="skill in monitoringSkills" :key="skill" class="text-gray-300 text-sm leading-tight">
+            <li v-for="skill in $data['Monitoring & ObservabilitySkills']" :key="skill" class="text-gray-300 text-sm leading-tight">
               {{ skill }}
             </li>
           </ul>
         </div>
 
-        <!-- Programming & Scripting -->
+        <!-- Automation & Scripting -->
         <div>
           <h3 class="text-sm font-semibold mb-2 text-primary-400 border-b border-primary-500/30 pb-1">
-            Scripting
+            Automation & Scripting
           </h3>
           <ul class="space-y-0.5">
-            <li v-for="skill in programmingSkills" :key="skill" class="text-gray-300 text-sm leading-tight">
+            <li v-for="skill in $data['Automation & ScriptingSkills']" :key="skill" class="text-gray-300 text-sm leading-tight">
               {{ skill }}
             </li>
           </ul>
@@ -91,12 +91,12 @@ export default {
   components: {},
   data() {
     return {
-      cloudSkills: ['AWS', 'GCP'],
-      containerSkills: ['Docker', 'Kubernetes', 'ECS', 'Docker Compose'],
-      cicdSkills: ['Jenkins', 'GitHub Actions', 'Bitbucket Pipeline', 'Jenkins', 'Codepipeline'],
-      iacSkills: ['Terraform', 'CloudFormation', 'Ansible'],
-      monitoringSkills: ['Prometheus', 'Grafana', 'Node Exporter', 'Loki', 'Promtail', 'Blackbox Exporter', 'CloudWatch'],
-      programmingSkills: ['Python', 'Bash', 'YAML'],
+      'Cloud PlatformsSkills': ['AWS', 'GCP'],
+      'Containerization & OrchestrationSkills': ['Docker', 'Kubernetes', 'ECS', 'Docker Compose'],
+      'CI-CDSkills': ['Jenkins', 'GitHub Actions', 'Bitbucket Pipeline', 'Jenkins', 'Codepipeline'],
+      IaCSkills: ['Terraform', 'CloudFormation', 'Ansible'],
+      'Monitoring & ObservabilitySkills': ['Prometheus', 'Grafana', 'Node Exporter', 'Loki', 'Promtail', 'Blackbox Exporter', 'CloudWatch'],
+      'Automation & ScriptingSkills': ['Python', 'Bash', 'YAML'],
     }
   }
 }

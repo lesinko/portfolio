@@ -17,6 +17,8 @@
       <!-- Experience Section -->
       <ExperienceSection />
       
+      <!-- Projects Section -->
+      <ProjectsSection />
       
       <!-- Contact Section -->
       <ContactSection />
@@ -33,6 +35,7 @@ import HeroSection from './components/HeroSection.vue'
 import AboutSection from './components/AboutSection.vue'
 import SkillsSection from './components/SkillsSection.vue'
 import ExperienceSection from './components/ExperienceSection.vue'
+import ProjectsSection from './components/ProjectsSection.vue'
 import ContactSection from './components/ContactSection.vue'
 import Footer from './components/Footer.vue'
 
@@ -44,6 +47,7 @@ export default {
     AboutSection,
     SkillsSection,
     ExperienceSection,
+    ProjectsSection,
     ContactSection,
     Footer
   }

@@ -54,6 +54,25 @@
           </div>
         </div>
 
+        <!-- Certifications -->
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-2xl font-semibold mb-6">Certifications</h3>
+          </div>
+          <div class="space-y-4">
+            <div v-for="cert in certifications" :key="cert.name" class="card flex items-center space-x-4">
+              <div class="w-14 h-14 bg-primary-100 dark:bg-primary-900/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-primary-600 text-2xl">🏆</span>
+              </div>
+              <div>
+                <h4 class="font-semibold">{{ cert.name }}</h4>
+                <p class="text-sm text-dark-600 dark:text-dark-400">{{ cert.issuer }}</p>
+                <p class="text-xs text-dark-500 dark:text-dark-500">{{ cert.date }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -66,6 +85,22 @@ import { ref } from 'vue'
 export default {
   name: 'ContactSection',
   components: {},
+  data() {
+    return {
+      certifications: [
+        {
+          name: 'AWS Certified Solutions Architect',
+          issuer: 'Amazon Web Services',
+          date: '2022'
+        },
+        {
+          name: 'AWS Certified Cloud Practitioner',
+          issuer: 'Amazon Web Services',
+          date: '2022'
+        }
+      ]
+    }
+  },
   setup() {
     const isSubmitting = ref(false)
     const form = ref({

@@ -5,71 +5,71 @@
         <h2 class="text-xl md:text-3xl font-bold mb-4">
           Work <span class="gradient-text">Experience</span>
         </h2>
-
       </div>
 
-      <div class="relative">
-        <!-- Timeline Line -->
-        <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-dark-200 dark:bg-dark-700"></div>
+      <div class="max-w-3xl mx-auto space-y-6">
+        <div
+          v-for="experience in experiences"
+          :key="experience.id"
+          class="card relative overflow-hidden transition-all duration-300 hover:shadow-xl"
+          :class="experience.current ? 'border-l-4 border-l-primary-600' : 'border-l-4 border-l-dark-300 dark:border-l-dark-600'"
+        >
+          <!-- Current Badge -->
+          <div v-if="experience.current" class="absolute top-4 right-4">
+            <span class="inline-flex items-center space-x-1 text-xs font-semibold bg-primary-600 text-white px-3 py-1 rounded-full">
+              <span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
+              <span>Current</span>
+            </span>
+          </div>
 
-        <!-- Experience Items -->
-        <div class="space-y-12">
-          <div v-for="(experience, index) in experiences" :key="experience.id" class="relative">
-            <!-- Timeline Dot -->
-            <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 -translate-x-1/2 w-4 h-4 bg-primary-600 rounded-full border-4 border-white dark:border-dark-900"></div>
-
-            <!-- Content -->
-            <div class="ml-12 md:ml-0 md:w-1/2" :class="index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'">
-              <div class="card">
-                <div class="flex items-start justify-between mb-4">
-                  <div>
-                    <h3 class="text-xl font-semibold">{{ experience.title }}</h3>
-                    <p class="text-primary-600 font-medium">{{ experience.company }}</p>
-                  </div>
-                  <span class="text-sm text-dark-600 dark:text-dark-400 bg-dark-100 dark:bg-dark-700 px-3 py-1 rounded-full">
-                    {{ experience.duration }}
-                  </span>
-                </div>
-
-                <p class="text-dark-600 dark:text-dark-400 mb-4">{{ experience.description }}</p>
-
-                <!-- Key Achievements -->
-                <div class="space-y-2">
-                  <h4 class="font-medium text-dark-900 dark:text-white">Key Achievements:</h4>
-                  <ul class="space-y-2">
-                    <li v-for="achievement in experience.achievements" :key="achievement" class="flex items-start space-x-2">
-                      <div class="w-1.5 h-1.5 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <span class="text-sm text-dark-600 dark:text-dark-400">{{ achievement }}</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <!-- Technologies Used -->
-                <div class="mt-4">
-                  <h4 class="font-medium text-dark-900 dark:text-white mb-2">Technologies:</h4>
-                  <div class="flex flex-wrap gap-2">
-                    <span v-for="tech in experience.technologies" :key="tech" class="text-xs bg-primary-100 dark:bg-primary-900/20 text-primary-700 dark:text-primary-300 px-2 py-1 rounded-full">
-                      {{ tech }}
-                    </span>
-                  </div>
-                </div>
-              </div>
+          <!-- Header -->
+          <div class="mb-3">
+            <h3 class="text-lg font-semibold text-dark-900 dark:text-white">{{ experience.title }}</h3>
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1">
+              <span class="text-primary-600 font-medium text-sm">{{ experience.company }}</span>
+              <span class="text-dark-400 text-xs">•</span>
+              <span class="text-sm text-dark-500 dark:text-dark-400">{{ experience.location }}</span>
+              <span class="text-dark-400 text-xs">•</span>
+              <span class="text-sm text-dark-500 dark:text-dark-400">{{ experience.duration }}</span>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Certifications -->
-      <div class="mt-20">
-        <h3 class="text-2xl font-semibold text-center mb-8">Certifications</h3>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div v-for="cert in certifications" :key="cert.name" class="card text-center">
-            <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-primary-600 text-2xl">🏆</span>
-            </div>
-            <h4 class="font-semibold mb-2">{{ cert.name }}</h4>
-            <p class="text-sm text-dark-600 dark:text-dark-400 mb-2">{{ cert.issuer }}</p>
-            <p class="text-xs text-dark-500 dark:text-dark-500">{{ cert.date }}</p>
+          <!-- Description -->
+          <p class="text-sm text-dark-600 dark:text-dark-400 mb-4 leading-relaxed">
+            {{ experience.description }}
+          </p>
+
+          <!-- Key Achievements (show first 3, expandable) -->
+          <div class="space-y-2 mb-4">
+            <h4 class="text-xs font-semibold uppercase tracking-wider text-dark-500 dark:text-dark-400">Key Achievements</h4>
+            <ul class="space-y-1.5">
+              <li
+                v-for="(achievement, i) in visibleAchievements(experience)"
+                :key="i"
+                class="flex items-start space-x-2"
+              >
+                <span class="text-primary-600 mt-0.5 flex-shrink-0">▸</span>
+                <span class="text-sm text-dark-600 dark:text-dark-400">{{ achievement }}</span>
+              </li>
+            </ul>
+            <button
+              v-if="experience.achievements.length > 3"
+              @click="toggleExpand(experience.id)"
+              class="text-xs text-primary-600 hover:text-primary-700 font-medium mt-1 transition-colors"
+            >
+              {{ expanded.includes(experience.id) ? '← Show less' : `+${experience.achievements.length - 3} more` }}
+            </button>
+          </div>
+
+          <!-- Technologies -->
+          <div class="flex flex-wrap gap-1.5 pt-3 border-t border-dark-200 dark:border-dark-700">
+            <span
+              v-for="tech in experience.technologies"
+              :key="tech"
+              class="text-xs bg-dark-100 dark:bg-dark-700 text-dark-600 dark:text-dark-300 px-2 py-0.5 rounded-full"
+            >
+              {{ tech }}
+            </span>
           </div>
         </div>
       </div>
@@ -78,24 +78,25 @@
 </template>
 
 <script>
-// Icons will be replaced with simple SVG or text
-
 export default {
   name: 'ExperienceSection',
   components: {},
   data() {
     return {
+      expanded: [],
       experiences: [
         {
           id: 1,
+          current: true,
           title: 'Senior DevOps Engineer',
           company: 'Nathan & Nathan',
-          duration: '2024 - Present',
-          description: ' I oversee the design of scalable, secure architectures by implementing DevOps best practices across different environments.',
+          location: 'Dubai,UAE',
+          duration: '2024 — Present',
+          description: 'Oversee the design of scalable, secure architectures by implementing DevOps best practices across different environments.',
           achievements: [
             'Build and manage automated CI/CD with Bitbucket Pipelines, reducing deployment time across different environments',
-            'Migrated over 150+ applications from docker swarm to AWS ECS managed cluster with zero downtime',
-            'Automated routine DevOps tasks (e.g., AWS provisioning, database access, repository acess) using Python and Terraform',
+            'Migrated over 150+ applications from Docker Swarm to AWS ECS managed cluster with zero downtime',
+            'Automated routine DevOps tasks (e.g., AWS provisioning, database access, repository access) using Python and Terraform',
             'Implemented centralized monitoring and logging stack using Prometheus, Node Exporter, Loki, Promtail, and Grafana',
             'Developed MongoDB backup, monitoring, and auto-scaling strategies for high availability and performance',
             'Integrated SonarQube, Trivy, and Gitleaks into CI/CD to enforce code quality and detect vulnerabilities early',
@@ -104,10 +105,12 @@ export default {
         },
         {
           id: 2,
+          current: false,
           title: 'DevOps Engineer',
           company: 'Xetova LTD.',
-          duration: '2022 - 2023',
-          description: 'Collaborated closely with development teams to enforce operational best practices and optimized quality code.',
+          location: 'Nairobi,Kenya',
+          duration: '2022 — 2023',
+          description: 'Collaborated closely with development teams to enforce operational best practices and deliver optimized, quality code.',
           achievements: [
             'Dockerized PHP and React applications and deployed them to AWS EC2, improving consistency and deployment efficiency',
             'Provisioned and managed AWS infrastructure using CloudFormation, accelerating environment setup and increasing reliability',
@@ -118,11 +121,13 @@ export default {
           technologies: ['Docker', 'Cloudflare', 'React', 'Prometheus', 'Grafana', 'AWS', 'Bash', 'PHP', 'Wazuh', 'Apache']
         },
         {
-          id: 4,
+          id: 3,
+          current: false,
           title: 'Cloud Engineer',
           company: 'Azubi Africa Bootcamp',
-          duration: '01/2022 - 07/2022',
-          description: 'Completed an intensive cloud engineering apprenticeship focused on designing secure, scalable AWS architectures. Gained hands-on experience with core AWS services, automation, and cloud security best practices while delivering production-ready infrastructure solutions..',
+          location: 'Remote',
+          duration: 'Jan 2022 — Jul 2022',
+          description: 'Completed an intensive cloud engineering apprenticeship focused on designing secure, scalable AWS architectures with hands-on experience in core AWS services, automation, and cloud security best practices.',
           achievements: [
             'Designed and optimized AWS VPC architectures with subnets, route tables, NACLs, and gateways to ensure secure, efficient networking',
             'Deployed EC2 and RDS instances across multiple Availability Zones for high availability and fault tolerance',
@@ -132,19 +137,22 @@ export default {
           ],
           technologies: ['Linux', 'Git', 'Python', 'VPC', 'S3', 'RDS', 'Nginx', 'CloudFormation', 'Load Balancer', 'IAM']
         }
-      ],
-      certifications: [
-        {
-          name: 'AWS Certified Solutions Architect',
-          issuer: 'Amazon Web Services',
-          date: '2022'
-        },
-        {
-          name: 'AWS Certified Cloud Practicioner',
-          issuer: 'Amazon Web Services',
-          date: '2022'
-        }
       ]
+    }
+  },
+  methods: {
+    toggleExpand(id) {
+      if (this.expanded.includes(id)) {
+        this.expanded = this.expanded.filter(e => e !== id)
+      } else {
+        this.expanded.push(id)
+      }
+    },
+    visibleAchievements(experience) {
+      if (this.expanded.includes(experience.id)) {
+        return experience.achievements
+      }
+      return experience.achievements.slice(0, 3)
     }
   }
 }

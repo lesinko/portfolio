@@ -6,76 +6,27 @@
           About <span class="gradient-text">Me</span>
         </h2>
         <p class="text-lg text-dark-600 dark:text-dark-400 max-w-2xl mx-auto">
-          Experienced Cloud and DevOps Engineer with over 4 years of experience specializing on automation, scalability, and system reliability. I bridge development and operations by building secure CI/CD pipelines, managing cloud infrastructure, and streamlining deployments to deliver faster, more resilient software.
+          Experienced Cloud and DevOps Engineer with over four years of hands-on experience designing, automating, and operating scalable, secure, and highly available cloud infrastructure. I bridge the gap between development and operations through automated CI/CD pipelines, cloud infrastructure, and containerized deployments. Strong focus on reliability, performance, and security, with a track record of streamlining delivery processes and enabling teams to ship resilient software faster.
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <!-- Content -->
-        <div class="space-y-6">
-        
-          <!-- Key Points -->
-          <div class="space-y-4">
-            <h3 class="text-2xl font-semibold">What I Do</h3>
-            <div class="grid gap-4">
-              <div class="flex items-start space-x-3">
-                <div class="w-6 h-6 bg-primary-100 dark:bg-primary-900/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span class="text-primary-600">✓</span>
-                </div>
-                <div>
-                  <h4 class="font-medium">Infrastructure as Code</h4>
-                  <p class="text-sm text-dark-600 dark:text-dark-400">Design and implement infrastructure using Terraform</p>
-                </div>
-              </div>
-              <div class="flex items-start space-x-3">
-                <div class="w-6 h-6 bg-primary-100 dark:bg-primary-900/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span class="text-primary-600">✓</span>
-                </div>
-                <div>
-                  <h4 class="font-medium">CI/CD Pipeline Development</h4>
-                  <p class="text-sm text-dark-600 dark:text-dark-400">Build and manage robust deployment pipelines using Jenkin,Bitbucket Pipelines and GitHub Actions</p>
-                </div>
-              </div>
-              <div class="flex items-start space-x-3">
-                <div class="w-6 h-6 bg-primary-100 dark:bg-primary-900/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span class="text-primary-600">✓</span>
-                </div>
-                <div>
-                  <h4 class="font-medium">Container Orchestration</h4>
-                  <p class="text-sm text-dark-600 dark:text-dark-400">Manage containerized applications with AWS ECS, K8S and Docker</p>
-                </div>
-              </div>
-              <div class="flex items-start space-x-3">
-                <div class="w-6 h-6 bg-primary-100 dark:bg-primary-900/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span class="text-primary-600">✓</span>
-                </div>
-                <div>
-                  <h4 class="font-medium">Monitoring & Observability</h4>
-                  <p class="text-sm text-dark-600 dark:text-dark-400">Implement monitoring solutions with Prometheus, Grafana, Loki and Promtail</p>
-                </div>
-              </div>
-            </div>
-          </div>
+      <!-- Quick Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto" ref="statsContainer">
+        <div class="card text-center">
+          <div class="text-2xl font-bold gradient-text">{{ animatedYears }}+</div>
+          <div class="text-sm text-dark-600 dark:text-dark-400">Years Experience</div>
         </div>
-
-        <!-- Visual/Stats -->
-        <div class="space-y-8">
-
-          <!-- Quick Stats -->
-          <div class="grid grid-cols-2 gap-4">
-            <div class="card text-center">
-              <div class="text-2xl font-bold gradient-text">4+</div>
-              <div class="text-sm text-dark-600 dark:text-dark-400">Years Experience</div>
-            </div>
-            <div class="card text-center">
-              <div class="text-2xl font-bold gradient-text">12+</div>
-              <div class="text-sm text-dark-600 dark:text-dark-400">Technologies</div>
-            </div>
-            <div class="card text-center">
-              <div class="text-2xl font-bold gradient-text">24/7</div>
-              <div class="text-sm text-dark-600 dark:text-dark-400">Support</div>
-            </div>
-          </div>
+        <div class="card text-center">
+          <div class="text-2xl font-bold gradient-text">{{ animatedTech }}+</div>
+          <div class="text-sm text-dark-600 dark:text-dark-400">Technologies</div>
+        </div>
+        <div class="card text-center">
+          <div class="text-2xl font-bold gradient-text">{{ animatedApps }}+</div>
+          <div class="text-sm text-dark-600 dark:text-dark-400">Apps Deployed</div>
+        </div>
+        <div class="card text-center">
+          <div class="text-2xl font-bold gradient-text">{{ animatedUptime }}%</div>
+          <div class="text-sm text-dark-600 dark:text-dark-400">Uptime SLA</div>
         </div>
       </div>
     </div>
@@ -83,10 +34,56 @@
 </template>
 
 <script>
-// Icons will be replaced with simple SVG or text
-
 export default {
   name: 'AboutSection',
-  components: {}
+  components: {},
+  data() {
+    return {
+      animatedYears: 0,
+      animatedTech: 0,
+      animatedApps: 0,
+      animatedUptime: 0,
+      hasAnimated: false,
+    }
+  },
+  mounted() {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !this.hasAnimated) {
+            this.hasAnimated = true
+            this.animateValue('animatedYears', 4, 1500)
+            this.animateValue('animatedTech', 12, 1500)
+            this.animateValue('animatedApps', 150, 2000)
+            this.animateValue('animatedUptime', 99, 2000)
+          }
+        })
+      },
+      { threshold: 0.3 }
+    )
+    observer.observe(this.$refs.statsContainer)
+  },
+  methods: {
+    animateValue(property, target, duration) {
+      const start = 0
+      const startTime = performance.now()
+
+      const step = (currentTime) => {
+        const elapsed = currentTime - startTime
+        const progress = Math.min(elapsed / duration, 1)
+        // Ease-out cubic
+        const eased = 1 - Math.pow(1 - progress, 3)
+        this[property] = Math.floor(eased * (target - start) + start)
+
+        if (progress < 1) {
+          requestAnimationFrame(step)
+        } else {
+          this[property] = target
+        }
+      }
+
+      requestAnimationFrame(step)
+    },
+  },
 }
 </script> 

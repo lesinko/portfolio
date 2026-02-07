@@ -6,11 +6,29 @@
         <div class="space-y-8">
           <div class="space-y-4">
             <h1 class="text-xl md:text-3xl font-bold leading-tight">
-              Hi, I'm <span class="gradient-text">Titus Lesinko</span>
+              Hello 👋, I'm <span class="gradient-text">Titus Lesinko</span>
             </h1>
             <h2 class="text-xl text-dark-600 dark:text-dark-400 font-medium">
               DevOps | SRE | Cloud Engineer
             </h2>
+            <p class="text-dark-600 dark:text-dark-400 max-w-lg">
+              Building reliable, scalable infrastructure and automating everything in between.
+            </p>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap gap-4">
+            <a href="#contact" class="btn-primary inline-flex items-center space-x-2">
+              <span>Get In Touch</span>
+            </a>
+            <a
+              href="/Titus Lesinko-Resume.pdf"
+              download
+              class="btn-secondary inline-flex items-center space-x-2"
+            >
+              <span>📄</span>
+              <span>Download Resume</span>
+            </a>
           </div>
 
         </div>
